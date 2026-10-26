@@ -15,7 +15,7 @@ export const COLLECTIONS: Collection[] = [
       es: "Nuestra primera entrega. Inspirada en la cultura club de los años 90, las tipografías crudas y el algodón pesado de 240 GSM con lavado vintage.",
       en: "Our inaugural capsule drop. Rooted in 90s club culture, distressed raw lettering, and 240 GSM vintage-washed heavy cotton.",
     },
-    coverImage: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=1800&q=85",
     itemCount: 6,
   },
 ];
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
       { size: "M", stock: 24 },
       { size: "L", stock: 18 },
       { size: "XL", stock: 8 },
-      { size: "XXL", stock: 0 }, // Esgotat expressament per provar el flux de talla esgotada
+      { size: "XXL", stock: 0 },
     ],
     details: {
       composition: {
@@ -75,17 +75,17 @@ export const PRODUCTS: Product[] = [
     },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
-        alt: "Acid Dreamer Heavyweight Tee - Vista Frontal",
+        url: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=85",
+        alt: "Acid Dreamer Heavyweight Tee - Lookbook Editorial Frontal",
         isPrimary: true,
       },
       {
-        url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1000&q=80",
-        alt: "Acid Dreamer Heavyweight Tee - Detall teixit i caiguda",
+        url: "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=1000&q=85",
+        alt: "Acid Dreamer Heavyweight Tee - Detall Serigrafia Esquena",
       },
       {
-        url: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80",
-        alt: "Acid Dreamer Heavyweight Tee - Esquena i acabat",
+        url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1000&q=85",
+        alt: "Acid Dreamer Heavyweight Tee - Textura Cotó 240 GSM",
       },
     ],
     isNewArrival: true,
@@ -145,13 +145,17 @@ export const PRODUCTS: Product[] = [
     },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=1000&q=80",
-        alt: "Echoes of '92 Vintage Washed Tee - Vista Frontal",
+        url: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1000&q=85",
+        alt: "Echoes of '92 Vintage Washed Tee - Model Lookbook Estudi",
         isPrimary: true,
       },
       {
-        url: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=1000&q=80",
-        alt: "Echoes of '92 Vintage Washed Tee - Detall teixit blanc trencat",
+        url: "https://images.unsplash.com/photo-1574015974293-817f0ebebb74?auto=format&fit=crop&w=1000&q=85",
+        alt: "Echoes of '92 Vintage Washed Tee - Estilisme Carrer i Caiguda",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=1000&q=85",
+        alt: "Echoes of '92 Vintage Washed Tee - Detall Coll Acanalat",
       },
     ],
     isNewArrival: true,
@@ -211,13 +215,17 @@ export const PRODUCTS: Product[] = [
     },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1000&q=80",
-        alt: "Club Nocturne Boxy Tee - Vista Frontal",
+        url: "https://images.unsplash.com/photo-1503342394128-c104d54dba01?auto=format&fit=crop&w=1000&q=85",
+        alt: "Club Nocturne Boxy Tee - Lookbook Model Urbà",
         isPrimary: true,
       },
       {
-        url: "https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=1000&q=80",
-        alt: "Club Nocturne Boxy Tee - Estilisme de carrer",
+        url: "https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?auto=format&fit=crop&w=1000&q=85",
+        alt: "Club Nocturne Boxy Tee - Estilisme Urbà Nocturn",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1563630423918-b58f07336ac9?auto=format&fit=crop&w=1000&q=85",
+        alt: "Club Nocturne Boxy Tee - Detall Patronatge",
       },
     ],
     isNewArrival: false,
@@ -277,13 +285,17 @@ export const PRODUCTS: Product[] = [
     },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=1000&q=80",
-        alt: "Archive Monogram Raw Tee - Vista Frontal",
+        url: "https://images.unsplash.com/photo-1564557287817-3785e38ec1f5?auto=format&fit=crop&w=1000&q=85",
+        alt: "Archive Monogram Raw Tee - Estètica Eme Studios Lookbook",
         isPrimary: true,
       },
       {
-        url: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=1000&q=80",
-        alt: "Archive Monogram Raw Tee - Detall brodat",
+        url: "https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=1000&q=85",
+        alt: "Archive Monogram Raw Tee - Perspectiva Moda Carrer",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=1000&q=85",
+        alt: "Archive Monogram Raw Tee - Detall Brodat d'Arxiu",
       },
     ],
     isNewArrival: false,
@@ -343,13 +355,17 @@ export const PRODUCTS: Product[] = [
     },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1000&q=80",
-        alt: "Solar Drift Distressed Tee - Vista Frontal",
+        url: "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?auto=format&fit=crop&w=1000&q=85",
+        alt: "Solar Drift Distressed Tee - Vista Lookbook Editorial",
         isPrimary: true,
       },
       {
-        url: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
-        alt: "Solar Drift Distressed Tee - Detall desgastat",
+        url: "https://images.unsplash.com/photo-1550614000-4895a10e1bfd?auto=format&fit=crop&w=1000&q=85",
+        alt: "Solar Drift Distressed Tee - Detall Llum Càlida i Color",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1000&q=85",
+        alt: "Solar Drift Distressed Tee - Detall Desgastat Vintage",
       },
     ],
     isNewArrival: true,
@@ -409,13 +425,17 @@ export const PRODUCTS: Product[] = [
     },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
-        alt: "Heavy Studio Vintage Hoodie - Vista Frontal",
+        url: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1000&q=85",
+        alt: "Heavy Studio Vintage Hoodie - Model Oversize Nude Project Fit",
         isPrimary: true,
       },
       {
-        url: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80",
-        alt: "Heavy Studio Vintage Hoodie - Model i carrer",
+        url: "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?auto=format&fit=crop&w=1000&q=85",
+        alt: "Heavy Studio Vintage Hoodie - Esquena i Silueta Caputxa Doble",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=85",
+        alt: "Heavy Studio Vintage Hoodie - Detall Butxaca Cangur i Acabats",
       },
     ],
     isNewArrival: true,
@@ -425,9 +445,8 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const SHIPPING_POLICY = {
-  freeShippingThreshold: 50.0, // In EUR
-  standardShippingRate: 4.90,  // In EUR
+  freeShippingThreshold: 50.0,
+  standardShippingRate: 4.90,
   estimatedDays: "2-4 dies laborables a Espanya peninsular",
   returnsWindowDays: 14,
 };
-

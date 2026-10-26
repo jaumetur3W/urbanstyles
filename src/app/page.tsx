@@ -13,21 +13,40 @@ export default function HomePage() {
   const featuredProducts = PRODUCTS.slice(0, 4);
   const primaryCollection = COLLECTIONS[0];
 
+  const moodboardImages = [
+    {
+      url: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80",
+      tag: "PARIS ARCHIVE '26",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=800&q=80",
+      tag: "VINTAGE WASH 240G",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1550614000-4895a10e1bfd?auto=format&fit=crop&w=800&q=80",
+      tag: "GOLDEN HOUR DROP",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=800&q=80",
+      tag: "BOXY SILHOUETTE",
+    },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 1. HERO EDITORIAL */}
+      {/* 1. HERO EDITORIAL (Estètica Nude Project / Eme Studios) */}
       <section className="relative w-full h-[88vh] min-h-[580px] max-h-[920px] flex items-end justify-start overflow-hidden bg-brand-dark">
         {/* Background Editorial Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=2000&q=85"
-            alt="UrbanStyles - Campanya Drop 01 Streetwear"
+            src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=85"
+            alt="UrbanStyles - Campanya Lookbook Streetwear Editorial"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-70 scale-105 transition-transform duration-1000 ease-out"
+            className="object-cover object-center opacity-80 scale-105 transition-transform duration-1000 ease-out"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/15" />
         </div>
 
         {/* Hero Content */}
@@ -42,7 +61,7 @@ export default function HomePage() {
               {t.hero.title}
             </h1>
 
-            <p className="text-xs sm:text-base text-stone-300 font-normal leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-base text-stone-200 font-normal leading-relaxed max-w-xl">
               {t.hero.subtitle}
             </p>
 
@@ -117,21 +136,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. BRAND MANIFESTO & STORY */}
+      {/* 4. BRAND MANIFESTO & STORY (Editorial Fashion Look) */}
       <section className="bg-brand-dark text-white py-20 sm:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Visual Lookbook Image */}
             <div className="lg:col-span-5 relative aspect-[4/5] bg-stone-800 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1200&q=80"
-                alt="UrbanStyles filosofia de marca"
+                src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1200&q=85"
+                alt="UrbanStyles filosofia de marca i patronatge"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/60 backdrop-blur-sm text-[10px] font-mono tracking-widest uppercase border border-white/20">
-                UrbanStyles Studio • Concept 2026
+                UrbanStyles Studio • Lookbook 2026
               </div>
             </div>
 
@@ -148,7 +167,7 @@ export default function HomePage() {
                   UrbanStyles naix per omplir el buit entre el streetwear massiu de baixa densitat i les peces de passarel·la inaccessibles. Cada camiseta està construïda a partir d&apos;un patró propi: espatlles estructurades, coll acanalat ferm i un gramatge real de 240 GSM que no perd la forma després del rentat.
                 </p>
                 <p>
-                  Inspirats en l&apos;esperit underground dels anys 90, barregem rentats minerals desgastats amb una composició visual neta i contemporània.
+                  Inspirats en l&apos;estètica contemporània de l&apos;escena europea, barregem rentats minerals vintage amb una composició visual neta, siluetes amples i detalls acurats.
                 </p>
               </div>
 
@@ -179,7 +198,7 @@ export default function HomePage() {
             alt={primaryCollection.name[language]}
             fill
             sizes="100vw"
-            className="object-cover opacity-60"
+            className="object-cover opacity-65"
           />
           <div className="relative z-10 max-w-xl space-y-4 text-white">
             <span className="text-xs font-mono uppercase tracking-widest text-brand-accent">
@@ -201,6 +220,48 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 6. COMMUNITY & MOODBOARD (Estètica Nude Project / Eme Studios) */}
+      <section className="pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-brand-border gap-2">
+          <div>
+            <span className="text-[11px] font-mono uppercase tracking-widest text-brand-muted">
+              Moodboard & Street Culture
+            </span>
+            <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tightest text-brand-dark mt-1">
+              UrbanStyles Community
+            </h3>
+          </div>
+          <span className="text-xs font-mono text-stone-500 uppercase tracking-widest flex items-center gap-1.5">
+            <svg className="w-4 h-4 text-brand-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+            <span>@urbanstyles.clo</span>
+          </span>
+        </div>
+
+        {/* 4-Column Editorial Lookbook Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          {moodboardImages.map((item, idx) => (
+            <div key={idx} className="group relative aspect-[3/4] overflow-hidden bg-stone-200">
+              <Image
+                src={item.url}
+                alt={item.tag}
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 sm:p-4">
+                <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase text-white">
+                  {item.tag}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

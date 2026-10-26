@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     siteName: "UrbanStyles",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1200&q=80",
+        url: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85",
         width: 1200,
         height: 630,
-        alt: "UrbanStyles - Drop 01 Retro Horizons",
+        alt: "UrbanStyles - Drop 01 Retro Horizons Editorial Campaign",
       },
     ],
     locale: "ca_ES",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "UrbanStyles | Streetwear Contemporani",
     description: "Camisetes pesades de 240 GSM i estètica retro urbana.",
-    images: ["https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1200&q=80"],
+    images: ["https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85"],
   },
   robots: {
     index: true,
