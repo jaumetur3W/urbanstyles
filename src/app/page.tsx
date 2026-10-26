@@ -15,38 +15,38 @@ export default function HomePage() {
 
   const moodboardImages = [
     {
-      url: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80",
-      tag: "PARIS ARCHIVE '26",
+      url: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+      tag: "RAW OFF-WHITE 250G",
     },
     {
-      url: "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=800&q=80",
-      tag: "VINTAGE WASH 240G",
+      url: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=800&q=80",
+      tag: "WASHED BLACK BOXY",
     },
     {
-      url: "https://images.unsplash.com/photo-1550614000-4895a10e1bfd?auto=format&fit=crop&w=800&q=80",
-      tag: "GOLDEN HOUR DROP",
+      url: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+      tag: "DESERT SAND BLANK",
     },
     {
-      url: "https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&w=800&q=80",
-      tag: "BOXY SILHOUETTE",
+      url: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+      tag: "450 GSM PLAIN HOODIE",
     },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 1. HERO EDITORIAL (Estètica Nude Project / Eme Studios) */}
+      {/* 1. HERO EDITORIAL (Peces Bàsiques Llises Sense Dissenys) */}
       <section className="relative w-full h-[88vh] min-h-[580px] max-h-[920px] flex items-end justify-start overflow-hidden bg-brand-dark">
         {/* Background Editorial Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=85"
-            alt="UrbanStyles - Campanya Lookbook Streetwear Editorial"
+            src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=2000&q=85"
+            alt="UrbanStyles - The Blank Capsule Bàsics Llissos"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-80 scale-105 transition-transform duration-1000 ease-out"
+            className="object-cover object-center opacity-75 scale-105 transition-transform duration-1000 ease-out"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
         </div>
 
         {/* Hero Content */}
@@ -94,36 +94,36 @@ export default function HomePage() {
             </span>
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-brand-accent rounded-full" />
+              Sense Estampats ni Distraccions
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-brand-accent rounded-full" />
               Enviaments Gratuïts &gt; 50€ a Espanya
             </span>
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-brand-accent rounded-full" />
               Patronatge Boxy Oversized
             </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-brand-accent rounded-full" />
-              14 Dies de Garantia i Canvi
-            </span>
           </div>
         </div>
       </section>
 
-      {/* 3. FEATURED PRODUCTS (DROP 01 ESSENTIALS) */}
+      {/* 3. FEATURED PRODUCTS (THE BLANK BASICS) */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 pb-4 border-b border-brand-border gap-4">
           <div>
             <span className="text-[11px] font-mono uppercase tracking-widest text-brand-muted">
-              Selecció Destacada
+              The Blank Capsule
             </span>
             <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tightest text-brand-dark mt-1">
-              Les Peces del Moment
+              Bàsics Pesats Atemporals
             </h2>
           </div>
           <Link
             href="/botiga"
             className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-brand-dark hover:text-brand-accent transition-colors self-start md:self-auto"
           >
-            <span>Veure tot el catàleg ({PRODUCTS.length})</span>
+            <span>Veure tots els bàsics ({PRODUCTS.length})</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -136,38 +136,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. BRAND MANIFESTO & STORY (Editorial Fashion Look) */}
+      {/* 4. BRAND MANIFESTO & STORY (Puresa del bàsic sense dissenys) */}
       <section className="bg-brand-dark text-white py-20 sm:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Visual Lookbook Image */}
             <div className="lg:col-span-5 relative aspect-[4/5] bg-stone-800 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1200&q=85"
-                alt="UrbanStyles filosofia de marca i patronatge"
+                src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1200&q=85"
+                alt="UrbanStyles puresa del bàsic llis sense estampats"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/60 backdrop-blur-sm text-[10px] font-mono tracking-widest uppercase border border-white/20">
-                UrbanStyles Studio • Lookbook 2026
+                UrbanStyles Blank Capsule • Cotó Pesat 240g
               </div>
             </div>
 
             {/* Manifesto Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="text-xs font-mono uppercase tracking-widest text-brand-accent">
-                Manifest Fundacional
+                Puresa Atemporal
               </span>
               <h2 className="text-3xl sm:text-5xl font-black tracking-tightest uppercase leading-tight">
-                No fem samarretes bàsiques. Confeccionem caràcter.
+                Sense estampats. Sense gràfics. Només patró i teixit pur.
               </h2>
               <div className="space-y-4 text-sm sm:text-base text-stone-300 font-normal leading-relaxed">
                 <p>
-                  UrbanStyles naix per omplir el buit entre el streetwear massiu de baixa densitat i les peces de passarel·la inaccessibles. Cada camiseta està construïda a partir d&apos;un patró propi: espatlles estructurades, coll acanalat ferm i un gramatge real de 240 GSM que no perd la forma després del rentat.
+                  Despullades de logotips i serigrafies, les nostres peces bàsiques posen tota la importància en la silueta i la qualitat tangible del teixit. Un patronatge propi d&apos;espatlles estructurades, màniga àmplia i un coll de canalé ferm que no cedeix.
                 </p>
                 <p>
-                  Inspirats en l&apos;estètica contemporània de l&apos;escena europea, barregem rentats minerals vintage amb una composició visual neta, siluetes amples i detalls acurats.
+                  El gramatge de 240 GSM garanteix que la camiseta caiga de forma impecable sense apegar-se, oferint una durabilitat i tacte premium ideals per al dia a dia.
                 </p>
               </div>
 
@@ -181,8 +181,8 @@ export default function HomePage() {
                   <span className="text-[11px] text-stone-400 uppercase tracking-wider">Cotó Orgànic</span>
                 </div>
                 <div>
-                  <span className="block text-2xl sm:text-3xl font-black text-white">Boxy</span>
-                  <span className="text-[11px] text-stone-400 uppercase tracking-wider">Patró Propi</span>
+                  <span className="block text-2xl sm:text-3xl font-black text-white">Blank</span>
+                  <span className="text-[11px] text-stone-400 uppercase tracking-wider">Sense Estampats</span>
                 </div>
               </div>
             </div>
@@ -215,7 +215,7 @@ export default function HomePage() {
                 href="/colleccions"
                 className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-brand-dark text-xs font-bold tracking-widest uppercase hover:bg-brand-accent hover:text-white transition-colors"
               >
-                <span>Descobrir el Drop</span>
+                <span>Descobrir la Col·lecció</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -223,15 +223,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. COMMUNITY & MOODBOARD (Estètica Nude Project / Eme Studios) */}
+      {/* 6. COMMUNITY & MOODBOARD */}
       <section className="pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-brand-border gap-2">
           <div>
             <span className="text-[11px] font-mono uppercase tracking-widest text-brand-muted">
-              Moodboard & Street Culture
+              Moodboard & Minimalist Culture
             </span>
             <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tightest text-brand-dark mt-1">
-              UrbanStyles Community
+              UrbanStyles Essentials
             </h3>
           </div>
           <span className="text-xs font-mono text-stone-500 uppercase tracking-widest flex items-center gap-1.5">
