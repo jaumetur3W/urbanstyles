@@ -1,15 +1,19 @@
 import { Collection, Product } from "@/types";
 
-// TWO UNIFIED CANONICAL IMAGES SHARED ACROSS ALL PRODUCTS (AS REQUESTED)
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// TWO UNIFIED CANONICAL IMAGES OF THE SAME T-SHIRT FROM 2 POINTS OF VIEW:
+// Point of view 1: Front view (vista frontal) of the heavyweight boxy blank t-shirt
+// Point of view 2: Back view (vista posterior) of the exact same t-shirt
 const UNIFIED_PRIMARY_IMAGE = {
-  url: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=85",
-  alt: "UrbanStyles Atelier Heavyweight Blank Essential - Primary Lookbook",
+  url: `${basePath}/images/products/t-shirt-front.webp`,
+  alt: "UrbanStyles Heavyweight Boxy T-Shirt - Vista Frontal",
   isPrimary: true,
 };
 
 const UNIFIED_HOVER_IMAGE = {
-  url: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=85",
-  alt: "UrbanStyles Atelier Heavyweight Blank Essential - Hover Detail View",
+  url: `${basePath}/images/products/t-shirt-back.webp`,
+  alt: "UrbanStyles Heavyweight Boxy T-Shirt - Vista Posterior / Esquena",
 };
 
 export const COLLECTIONS: Collection[] = [

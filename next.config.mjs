@@ -6,6 +6,9 @@ const nextConfig = {
   output: 'export',
   basePath: basePath,
   assetPrefix: isGithubActions ? '/urbanstyles/' : '',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
