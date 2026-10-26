@@ -9,7 +9,7 @@ import { ProductSize } from "@/types";
 import { Search, X } from "lucide-react";
 
 function ShopContent() {
-  const { t, language } = useStore();
+  const { language } = useStore();
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("categoria") || "all";
 
@@ -58,159 +58,156 @@ function ShopContent() {
     searchQuery !== "" || selectedCategory !== "all" || selectedSize !== "all";
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
-      {/* Catalog Header */}
-      <div className="mb-8 sm:mb-12 border-b border-brand-border pb-6 sm:pb-8">
-        <span className="text-[11px] font-mono uppercase tracking-widest text-brand-muted">
-          Catàleg Oficial UrbanStyles
-        </span>
-        <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tightest text-brand-dark mt-1">
-          {t.shop.title}
-        </h1>
-        <p className="text-xs sm:text-sm text-brand-muted max-w-xl mt-2">
-          {t.shop.subtitle}
-        </p>
-      </div>
-
-      {/* Filter and Search Bar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-brand-border">
-        {/* Search input */}
-        <div className="relative flex-1 max-w-md">
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Cercar per model, teixit o estil..."
-            className="w-full pl-9 pr-4 py-2.5 bg-white border border-brand-border text-xs uppercase tracking-wider text-brand-dark placeholder:text-stone-400 focus:outline-none focus:border-brand-dark"
-          />
-          <Search className="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-brand-dark"
-              aria-label="Netejar cerca"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </div>
-
-        {/* Filter Controls Desktop */}
-        <div className="flex flex-wrap items-center gap-3">
-          {/* Category buttons */}
-          <div className="inline-flex border border-brand-border bg-white text-xs font-bold uppercase tracking-wider">
-            <button
-              onClick={() => setSelectedCategory("all")}
-              className={`px-3 py-2 transition-colors ${
-                selectedCategory === "all"
-                  ? "bg-brand-dark text-white"
-                  : "text-brand-dark hover:bg-stone-50"
-              }`}
-            >
-              {t.shop.filterAll}
-            </button>
-            <button
-              onClick={() => setSelectedCategory("tees")}
-              className={`px-3 py-2 border-l border-brand-border transition-colors ${
-                selectedCategory === "tees"
-                  ? "bg-brand-dark text-white"
-                  : "text-brand-dark hover:bg-stone-50"
-              }`}
-            >
-              {t.shop.filterTees}
-            </button>
-            <button
-              onClick={() => setSelectedCategory("hoodies")}
-              className={`px-3 py-2 border-l border-brand-border transition-colors ${
-                selectedCategory === "hoodies"
-                  ? "bg-brand-dark text-white"
-                  : "text-brand-dark hover:bg-stone-50"
-              }`}
-            >
-              {t.shop.filterHoodies}
-            </button>
+    <div className="w-full bg-chalk text-charcoal min-h-screen">
+      {/* Top Technical Archive Header */}
+      <div className="border-b border-charcoal/20 px-4 sm:px-8 py-8 sm:py-12 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span className="text-[10px] font-mono tracking-widest uppercase text-raw block">
+              [ ARCHIVE INDEX // 01-06 ]
+            </span>
+            <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tightest mt-1 text-charcoal">
+              THE BLANK CATALOGUE
+            </h1>
+            <p className="font-mono text-xs text-raw uppercase max-w-xl mt-2">
+              Peces bàsiques d&apos;alt gramatge. Sense serigrafies ni elements superflus: patronatge boxy i cotó pesat pur.
+            </p>
           </div>
 
-          {/* Size Filter Dropdown */}
-          <div className="relative">
+          <div className="font-mono text-xs border border-charcoal/20 px-4 py-2 bg-bone/30 self-start md:self-auto">
+            TOTAL UNITS: <strong className="text-charcoal">{filteredProducts.length} BLANKS</strong>
+          </div>
+        </div>
+      </div>
+
+      {/* Control Panel / Filter Matrix (VOID Brutalist Control Bar) */}
+      <div className="border-b border-charcoal/20 bg-bone/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          {/* Search box */}
+          <div className="relative flex-1 max-w-md">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="SEARCH BY COLOR OR GSM..."
+              className="w-full pl-9 pr-4 py-2 bg-chalk border border-charcoal/20 text-xs font-mono uppercase tracking-wider text-charcoal placeholder:text-raw/60 focus:outline-none focus:border-charcoal"
+            />
+            <Search className="w-3.5 h-3.5 text-raw absolute left-3 top-1/2 -translate-y-1/2" />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-raw hover:text-charcoal"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            )}
+          </div>
+
+          {/* Filter Categories Buttons */}
+          <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
+            <div className="inline-flex border border-charcoal/20 divide-x divide-charcoal/20 bg-chalk">
+              <button
+                onClick={() => setSelectedCategory("all")}
+                className={`px-3 py-1.5 transition-colors uppercase ${
+                  selectedCategory === "all"
+                    ? "bg-charcoal text-chalk font-bold"
+                    : "text-charcoal hover:bg-bone"
+                }`}
+              >
+                ALL [06]
+              </button>
+              <button
+                onClick={() => setSelectedCategory("tees")}
+                className={`px-3 py-1.5 transition-colors uppercase ${
+                  selectedCategory === "tees"
+                    ? "bg-charcoal text-chalk font-bold"
+                    : "text-charcoal hover:bg-bone"
+                }`}
+              >
+                TEES [05]
+              </button>
+              <button
+                onClick={() => setSelectedCategory("hoodies")}
+                className={`px-3 py-1.5 transition-colors uppercase ${
+                  selectedCategory === "hoodies"
+                    ? "bg-charcoal text-chalk font-bold"
+                    : "text-charcoal hover:bg-bone"
+                }`}
+              >
+                HOODIES [01]
+              </button>
+            </div>
+
+            {/* Size Dropdown */}
             <select
               value={selectedSize}
               onChange={(e) => setSelectedSize(e.target.value as ProductSize | "all")}
-              className="appearance-none bg-white border border-brand-border px-3.5 py-2 pr-8 text-xs font-bold uppercase tracking-wider text-brand-dark focus:outline-none focus:border-brand-dark cursor-pointer"
-              aria-label="Filtrar per talla"
+              className="bg-chalk border border-charcoal/20 px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-charcoal focus:outline-none focus:border-charcoal cursor-pointer"
             >
-              <option value="all">Talla: Totes</option>
-              <option value="S">Talla S</option>
-              <option value="M">Talla M</option>
-              <option value="L">Talla L</option>
-              <option value="XL">Talla XL</option>
-              <option value="XXL">Talla XXL</option>
+              <option value="all">SIZE: ALL</option>
+              <option value="S">SIZE S</option>
+              <option value="M">SIZE M</option>
+              <option value="L">SIZE L</option>
+              <option value="XL">SIZE XL</option>
+              <option value="XXL">SIZE XXL</option>
             </select>
-          </div>
 
-          {/* Sort Dropdown */}
-          <div className="relative">
+            {/* Sort Dropdown */}
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as "newest" | "price-asc" | "price-desc" | "name")}
-              className="appearance-none bg-white border border-brand-border px-3.5 py-2 pr-8 text-xs font-bold uppercase tracking-wider text-brand-dark focus:outline-none focus:border-brand-dark cursor-pointer"
-              aria-label="Ordenar productes"
+              className="bg-chalk border border-charcoal/20 px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-charcoal focus:outline-none focus:border-charcoal cursor-pointer"
             >
-              <option value="newest">{t.shop.sortNewest}</option>
-              <option value="price-asc">{t.shop.sortPriceAsc}</option>
-              <option value="price-desc">{t.shop.sortPriceDesc}</option>
-              <option value="name">{t.shop.sortName}</option>
+              <option value="newest">SORT: NEWEST</option>
+              <option value="price-asc">PRICE: LOW-HIGH</option>
+              <option value="price-desc">PRICE: HIGH-LOW</option>
+              <option value="name">NAME: A-Z</option>
             </select>
           </div>
         </div>
       </div>
 
-      {/* Active filters pill list */}
-      <div className="py-4 flex items-center justify-between text-xs text-brand-muted">
-        <div>
-          Mostrant <strong className="text-brand-dark">{filteredProducts.length}</strong> {t.shop.itemsCount}
-          {hasActiveFilters && (
+      {/* Catalog Matrix Body */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-16">
+        {hasActiveFilters && (
+          <div className="mb-6 flex items-center justify-between text-xs font-mono text-raw border-b border-charcoal/15 pb-3">
+            <span>FILTERED RESULTS: {filteredProducts.length} ITEMS</span>
             <button
               onClick={clearAllFilters}
-              className="ml-3 text-brand-accent hover:underline font-semibold"
+              className="text-charcoal underline hover:opacity-75 uppercase"
             >
-              {t.shop.clearFilters}
+              CLEAR ALL FILTERS [X]
             </button>
-          )}
-        </div>
-      </div>
+          </div>
+        )}
 
-      {/* Empty State */}
-      {filteredProducts.length === 0 ? (
-        <div className="text-center py-20 bg-white border border-dashed border-brand-border p-8 my-8">
-          <p className="text-sm font-bold uppercase tracking-wider text-brand-dark">
-            {t.shop.noResults}
-          </p>
-          <p className="text-xs text-brand-muted mt-2">
-            Prova a utilitzar termes més generals o neteja els filtres seleccionats.
-          </p>
-          <button
-            onClick={clearAllFilters}
-            className="mt-6 px-6 py-2.5 bg-brand-dark text-white text-xs font-bold uppercase tracking-widest hover:bg-brand-accent transition-colors"
-          >
-            {t.shop.clearFilters}
-          </button>
-        </div>
-      ) : (
-        /* Products Grid */
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 mt-4">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      )}
+        {filteredProducts.length === 0 ? (
+          <div className="text-center py-20 border border-dashed border-charcoal/30 p-8 font-mono">
+            <p className="text-sm uppercase font-bold text-charcoal">
+              NO BLANK GARMENTS FOUND MATCHING CRITERIA.
+            </p>
+            <button
+              onClick={clearAllFilters}
+              className="mt-4 px-6 py-2 bg-charcoal text-chalk text-xs font-mono uppercase tracking-widest hover:bg-pitch"
+            >
+              RESET FILTERS
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            {filteredProducts.map((product, idx) => (
+              <ProductCard key={product.id} product={product} index={idx + 1} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
 export default function ShopPage() {
   return (
-    <Suspense fallback={<div className="max-w-7xl mx-auto px-4 py-20 text-center text-xs font-mono tracking-widest uppercase">Carregant catàleg...</div>}>
+    <Suspense fallback={<div className="max-w-7xl mx-auto px-4 py-20 text-center text-xs font-mono tracking-widest uppercase">LOADING ARCHIVE...</div>}>
       <ShopContent />
     </Suspense>
   );

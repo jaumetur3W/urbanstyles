@@ -8,9 +8,10 @@ import { useStore } from "@/context/StoreContext";
 
 interface ProductCardProps {
   product: Product;
+  index?: number;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, index = 1 }: ProductCardProps) {
   const { language } = useStore();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -21,85 +22,80 @@ export default function ProductCard({ product }: ProductCardProps) {
   const isSoldOut = totalStock === 0;
 
   return (
-    <article className="group relative flex flex-col">
+    <article className="group relative flex flex-col bg-chalk border border-charcoal/15 hover:border-charcoal transition-colors">
+      {/* Top Technical Metadata Bar */}
+      <div className="flex items-center justify-between px-3 py-1.5 border-b border-charcoal/15 bg-bone/40 text-[10px] font-mono tracking-widest text-raw">
+        <span>[ 0{index} {"//"} BLANK ]</span>
+        <span>{product.details.weight.split(" ")[0]} GSM</span>
+      </div>
+
+      {/* Product Image Frame */}
       <Link
         href={`/producte/${product.slug}`}
-        className="block relative aspect-[3/4] w-full overflow-hidden bg-stone-200"
+        className="block relative aspect-[4/5] w-full overflow-hidden bg-bone"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Badges */}
-        <div className="absolute top-3 left-3 z-10 flex flex-col gap-1.5">
-          {product.isDropExclusive && (
-            <span className="bg-brand-dark text-white text-[10px] font-black tracking-widest uppercase px-2 py-1">
-              DROP 01
+        {/* Sold out stamp */}
+        {isSoldOut && (
+          <div className="absolute inset-0 z-20 bg-charcoal/80 flex items-center justify-center p-4">
+            <span className="font-mono text-xs font-black uppercase tracking-widest text-chalk border border-chalk px-3 py-1.5">
+              SOLD OUT // ARCHIVED
             </span>
-          )}
-          {product.isNewArrival && (
-            <span className="bg-brand-accent text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1">
-              NEW
-            </span>
-          )}
-          {isSoldOut && (
-            <span className="bg-red-700 text-white text-[10px] font-bold tracking-widest uppercase px-2 py-1">
-              SOLD OUT
-            </span>
-          )}
-        </div>
+          </div>
+        )}
 
-        {/* Product Images with Subtle Hover Switch */}
-        <div className="relative w-full h-full transition-transform duration-700 ease-out group-hover:scale-105">
+        {/* Hover swap with sharp brutalist transition */}
+        <div className="relative w-full h-full">
           <Image
             src={isHovered ? secondaryImage.url : primaryImage.url}
             alt={primaryImage.alt}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover object-center transition-opacity duration-500"
+            className="object-cover object-center transition-all duration-300"
           />
         </div>
       </Link>
 
-      {/* Product Details */}
-      <div className="pt-3.5 pb-2 flex flex-col space-y-1">
-        <div className="flex justify-between items-baseline gap-2">
-          <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-brand-dark group-hover:text-brand-accent transition-colors line-clamp-1">
+      {/* Product Info Table Cell */}
+      <div className="p-3.5 border-t border-charcoal/15 flex flex-col justify-between space-y-2 bg-chalk">
+        <div className="flex justify-between items-start gap-2">
+          <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-charcoal group-hover:underline line-clamp-1">
             <Link href={`/producte/${product.slug}`}>
               {product.name}
             </Link>
           </h3>
-          <div className="flex items-center gap-1.5 text-xs font-bold text-brand-dark flex-shrink-0">
-            {product.compareAtPrice && (
-              <span className="line-through text-brand-muted font-normal">
-                {product.compareAtPrice.toFixed(2)} €
-              </span>
-            )}
-            <span>{product.price.toFixed(2)} €</span>
-          </div>
+          <span className="font-mono text-xs font-bold text-charcoal flex-shrink-0">
+            {product.price.toFixed(2)} €
+          </span>
         </div>
 
-        {/* Tagline / Subtitle */}
-        <p className="text-[11px] text-brand-muted line-clamp-1">
-          {product.tagline[language]}
+        {/* Micro Technical Tag */}
+        <p className="text-[10px] font-mono text-raw line-clamp-1">
+          {product.color.name[language]} • {product.details.fit[language].split(".")[0]}
         </p>
 
-        {/* Size availability pills */}
-        <div className="pt-1.5 flex items-center gap-1.5">
-          {product.variants.map((v) => (
-            <span
-              key={v.size}
-              className={`text-[9px] px-1.5 py-0.5 border font-mono ${
-                v.stock > 0
-                  ? "border-brand-border text-brand-dark"
-                  : "border-dashed border-stone-300 text-stone-400 line-through"
-              }`}
-              title={v.stock > 0 ? `${v.size} (${v.stock} disponibles)` : `${v.size} (Esgotat)`}
-            >
-              {v.size}
-            </span>
-          ))}
+        {/* Sizes Bar (Brutalist Grid) */}
+        <div className="pt-2 border-t border-charcoal/10 flex items-center justify-between">
+          <div className="flex items-center gap-1 font-mono text-[9px]">
+            {product.variants.map((v) => (
+              <span
+                key={v.size}
+                className={`w-6 h-5 flex items-center justify-center border ${
+                  v.stock > 0
+                    ? "border-charcoal/30 text-charcoal"
+                    : "border-dashed border-charcoal/20 text-raw/40 line-through"
+                }`}
+              >
+                {v.size}
+              </span>
+            ))}
+          </div>
+          <span className="text-[9px] font-mono text-raw uppercase">
+            VIEW ITEM →
+          </span>
         </div>
       </div>
     </article>
   );
 }
-

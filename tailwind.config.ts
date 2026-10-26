@@ -9,36 +9,47 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          bg: "#F9F8F6",        // Off-white / paper cream retro
-          dark: "#0F0F10",      // Charcoal pitch black
-          darker: "#080809",
-          muted: "#71717A",     // Cool gray
-          subtle: "#A1A1AA",
-          border: "#E4E4E7",    // Fine light border
-          borderDark: "#27272A",
-          accent: "#C25E3E",    // Terracotta retro accent
-          accentHover: "#A84C2F",
-          olive: "#4A5240",     // Muted retro army olive
-        },
+        chalk: "#F7F6F2",       // Warm chalk artisan background
+        bone: "#ECEAE4",
+        concrete: "#D8D6CE",
+        charcoal: "#111111",    // Brutalist deep charcoal
+        pitch: "#080808",
+        raw: "#7E7B73",
+        umber: "#B35434",       // Artisan warm terracotta accent
+        line: "rgba(17, 17, 17, 0.14)", // 1px sharp structural border
       },
       fontFamily: {
         sans: [
           "var(--font-geist-sans)",
           "-apple-system",
           "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
           "Helvetica Neue",
           "sans-serif",
         ],
-        mono: ["var(--font-geist-mono)", "monospace"],
+        mono: [
+          "var(--font-geist-mono)",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "monospace",
+        ],
       },
       letterSpacing: {
-        tightest: "-0.04em",
-        tighter: "-0.02em",
-        widest: "0.15em",
-        mega: "0.25em",
+        tighter: "-0.04em",
+        tightest: "-0.06em",
+        widest: "0.2em",
+        mega: "0.3em",
+      },
+      animation: {
+        marquee: "marquee 25s linear infinite",
+        "marquee-fast": "marquee 15s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
     },
   },
