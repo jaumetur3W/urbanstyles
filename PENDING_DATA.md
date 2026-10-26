@@ -27,7 +27,7 @@ Aquest document manté la traçabilitat exhaustiva de totes les dades del negoci
 | **12** | **Xarxes Socials Oficials** | `[PENDENT]` | Pendent de confirmació dels perfils exactes d'Instagram i TikTok (ex. `@urbanstyles.es` o similar). No s'han publicat enllaços inventats. |
 | **13** | **Ubicació Física** | `[CONFIRMADA]` | UrbanStyles opera com a marca exclusivament digital (DNVB) sense botiga permanent oberta al públic. S'ha documentat amb total transparència a la pàgina de contacte i al peu de pàgina. |
 | **14** | **Dades Fiscals i Documents Legals** | `[BLOQUEJANT]` | S'han redactat les plantilles completes d'Avís Legal, Política de Privadesa (RGPD), Política de Cookies i Política de Devolucions (14 dies). Cal afegir el NIF/CIF i la Raó Social de l'empresa abans de la venda al públic. |
-| **15** | **Domini i Desplegament** | `[PENDENT]` | Projecte preparat per a desplegament immediat a Vercel, Netlify o servidor Node.js/Docker. Pendent de connectar el domini `urbanstyles.es` quan siga contractat. |
+| **15** | **Domini i Desplegament** | `[CONFIRMADA]` | Desplegament completat i verificat amb **GitHub Actions** a GitHub Pages: https://jaumetur3w.github.io/urbanstyles/ (HTTP 200 OK). Pendent de connectar domini personalitzat `urbanstyles.es` si el client ho desitja. |
 
 ---
 
